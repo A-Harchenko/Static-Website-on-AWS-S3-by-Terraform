@@ -43,7 +43,7 @@ resource "aws_s3_bucket_object" "index" {
   acl          = "public-read"
 }
 ```
-
+When you configure your bucket as a static website, the website is available at the AWS Region-specific website endpoint of the bucket. Depending on the region, the endpoint of the Amazon S3 website matches the format with dash.
 
 ```terraform
 output "website_endpoint" {
@@ -51,3 +51,7 @@ output "website_endpoint" {
   value = "${aws_s3_bucket.s3-my-static-site.website_endpoint}"
 }
 ```
+After executing this code, we get the url to our html file.
+
+<https://s3-my-static-site.s3-us-west-2.amazonaws.com/index.html>
+
