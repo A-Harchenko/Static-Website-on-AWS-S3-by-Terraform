@@ -51,7 +51,7 @@ output "website_endpoint" {
   value = "${aws_s3_bucket.s3-my-static-site.website_endpoint}"
 }
 ```
-After executing this code, we get the url to our html file.
+After executing this Terraform spec, we get the url to our html file.
 
 <https://s3-my-static-site.s3-us-west-2.amazonaws.com/index.html>
 
