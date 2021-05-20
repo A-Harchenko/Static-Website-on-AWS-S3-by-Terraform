@@ -32,15 +32,8 @@ resource "aws_s3_bucket" "s3-my-static-site" {
   website {
     index_document = "index.html"
   }
-
-  tags = {
-      name  = "Webserver for Task"
-      owner = "Harchenko Anastasia"
-  }
 }
-```
 
-```terraform
 resource "aws_s3_bucket_object" "index" {
   bucket       = "${aws_s3_bucket.s3-my-static-site.bucket}"
   key          = "index.html"
